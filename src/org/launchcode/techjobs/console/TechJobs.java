@@ -117,11 +117,13 @@ public class TechJobs {
             //    String jobKey = someJobs.get(i).getKey()
                 //String[] printedJobKeys = someJobs.get(i).keySet();
                 String[] printedJobKeys = someJobs.get(i).keySet().toArray(new String[0]);
-                String[] printedJobValues = someJobs.get(i).keySet().toArray(new String[0]);
-                    //for (int j : printedJobKeys) {
+                String[] printedJobValues = someJobs.get(i).values().toArray(new String[0]);
+                    //for (String j : printedJobKeys) {
+                    System.out.println("\n***");
                     for (int j = 0; j < printedJobKeys.length; j++) {
                         System.out.println(printedJobKeys[j]+": "+printedJobValues[j]);
             }
+                    System.out.println("***\n");
         }
 
     }
