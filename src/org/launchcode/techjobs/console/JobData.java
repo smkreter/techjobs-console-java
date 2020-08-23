@@ -92,7 +92,7 @@ public class JobData {
         //check if the string matches anything in any of the columns
         //for (HashMap<String, String> row : allJobs) {
         for (int i = 0; i < allJobs.size(); i++) {
-            String[] searchedJobValues = allJobs.get(i).values();
+            String[] searchedJobValues = allJobs.get(i).values().toArray(new String[0]);
             for (int j = 0; j < searchedJobValues.length; j++) {
                 if (searchedJobValues[j].contains(value)) {
                     if (!someJobs.contains(allJobs.get(i))) {
