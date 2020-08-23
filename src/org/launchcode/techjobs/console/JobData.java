@@ -84,6 +84,16 @@ public class JobData {
         return jobs;
     }
 
+    public static ArrayList<HashMap<String, String>> findByValue(String value) {
+        //make an array list of jobs that we'll add relevant things to
+        ArrayList<HashMap<String, String>> someJobs = new ArrayList<>();
+        //check if the string matches anything in any of the columns
+        //check if the hashmap that matches is already in the array list of jobs
+        //if it's new, add the hashmap to the array list of jobs
+        // return the array list of jobs
+        return someJobs;
+    }
+
     /**
      * Read in data from a CSV file and store it in a list
      */
