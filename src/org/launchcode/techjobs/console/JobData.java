@@ -88,15 +88,15 @@ public class JobData {
         // load data, if not already loaded
         loadData();
         //make an array list of jobs that we'll add relevant things to
-        ArrayList<HashMap<String, String>> someJobs = new ArrayList<>();
+        ArrayList<HashMap<String, String>> searchJobs = new ArrayList<>();
         //check if the string matches anything in any of the columns
         //for (HashMap<String, String> row : allJobs) {
         for (int i = 0; i < allJobs.size(); i++) {
             String[] searchedJobValues = allJobs.get(i).values().toArray(new String[0]);
             for (int j = 0; j < searchedJobValues.length; j++) {
                 if (searchedJobValues[j].contains(value)) {
-                    if (!someJobs.contains(allJobs.get(i))) {
-                        someJobs.add(allJobs.get(i));
+                    if (!searchJobs.contains(allJobs.get(i))) {
+                        searchJobs.add(allJobs.get(i));
                     }
                 }
             }
@@ -104,7 +104,7 @@ public class JobData {
         //check if the hashmap that matches is already in the array list of jobs
         //if it's new, add the hashmap to the array list of jobs
         // return the array list of jobs
-        return someJobs;
+        return searchJobs;
     }
 
     /**
