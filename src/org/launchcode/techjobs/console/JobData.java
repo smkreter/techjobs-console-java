@@ -94,7 +94,7 @@ public class JobData {
         for (int i = 0; i < allJobs.size(); i++) {
             String[] searchedJobValues = allJobs.get(i).values().toArray(new String[0]);
             for (int j = 0; j < searchedJobValues.length; j++) {
-                if (searchedJobValues[j].contains(value)) {
+                if (searchedJobValues[j].toLowerCase().contains(value)) {
                     if (!searchJobs.contains(allJobs.get(i))) {
                         searchJobs.add(allJobs.get(i));
                     }
@@ -104,7 +104,15 @@ public class JobData {
         //check if the hashmap that matches is already in the array list of jobs
         //if it's new, add the hashmap to the array list of jobs
         // return the array list of jobs
-        return searchJobs;
+        /*
+        if (searchJobs.size() == 0){
+            return System.out.println("No jobs match that query");
+        }else{
+
+         */
+            return searchJobs;
+        //}
+        //return searchJobs;
     }
 
     /**
